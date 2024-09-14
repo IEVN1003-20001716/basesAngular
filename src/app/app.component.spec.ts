@@ -7,7 +7,7 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterModule.forRoot([])
-      ],
+      ],        
       declarations: [
         AppComponent
       ],
@@ -33,3 +33,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, basesAngular');
   });
 });
+
