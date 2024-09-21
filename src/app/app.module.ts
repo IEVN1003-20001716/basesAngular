@@ -3,21 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductoFilterPipe } from './product/producto-filter.pipe';
 import { OperasBasesComponent } from './formularios/operas-bases/operas-bases.component';
+import { Ejemplo1Component } from './formularios/ejemplo1/ejemplo1.component';
+import { CinepolisAngularComponent } from './formularios/cinepolis-angular/cinepolis-angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductoFilterPipe,
-    OperasBasesComponent
+    OperasBasesComponent,
+    Ejemplo1Component,
+    CinepolisAngularComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
