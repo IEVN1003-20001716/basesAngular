@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cinepolis-angular.component.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CINEPOLIS</h1>
+    <form (ngSubmit)="calcularPrecio()">
+      <div class="form-group">
+        <label for="nombre">Cliente que realizará la compra:</label>
+        <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre" name="nombre" placeholder="Nombre completo" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="compradores">Cantidad de Compradores:</label>
+        <input type="number" id="compradores" class="form-control" [(ngModel)]="compradores" name="compradores" min="1" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="boletos">Cantidad de boletos:</label>
+        <input type="number" id="boletos" class="form-control" [(ngModel)]="boletos" name="boletos" [max]="compradores * boletosPorComprador" min="1" required>
+        <!-- <p>Máximo permitido: {{ compradores * boletosPorComprador }} boletos</p> -->
+      </div>
+  
+      <div class="form-group">
+        <label>¿Tiene tarjeta CINECO?</label>
+        <div>
+          <input type="checkbox" id="cineco" [(ngModel)]="usaCineco" name="cineco"> Sí
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Total</button>
+    </form>
+  
+    <div *ngIf="precioTotal !== null" class="resultado">
+      <p>Nombre del cliente: {{ nombre }}</p>
+      <p>Cantidad de compradores: {{ compradores }}</p>
+      <p>Cantidad de boletos: {{ boletos }}</p>
+      <p>Precio total: ${{ precioTotal }}</p>
+      <p *ngIf="usaCineco">Descuento adicional del 10% aplicado por tarjeta CINECO.</p>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
