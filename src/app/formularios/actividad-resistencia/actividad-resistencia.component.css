@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.box {
+    background-color: antiquewhite;
+    padding-top: 10px;
+    border: 4px solid black;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.banda {
+    margin: 0 10px 0 20px;
+}
+
+.Tolerancia {
+    margin-bottom: 10px;
+}
+
+select {
+    margin-bottom: 10px;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+}
+.caja {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    border: solid 3px black;
+}
+.result {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+table {
+    margin-top: 50px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.Tolerancia {
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+label, h2 {
+    font-size: 20px;
+}
+
+th {
+    background-color: antiquewhite;
+}
+
+td {
+    color: black;
+}
+button:hover {
+    background-color: antiquewhite;
+    transform: scale(1.0);
+}
